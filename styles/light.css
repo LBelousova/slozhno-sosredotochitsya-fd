@@ -16,12 +16,12 @@
 }
 
 .theme-light .header__accent-element::before {
-  content: "";
+  content: '';
   display: none;
 }
 
 .theme-light .header__accent-element::after {
-  content: "";
+  content: '';
   display: none;
 }
 
@@ -38,12 +38,12 @@
   }
 
   .theme-auto .header__accent-element::before {
-    content: "";
+    content: '';
     display: none;
   }
 
   .theme-auto .header__accent-element::after {
-    content: "";
+    content: '';
     display: none;
   }
 }
