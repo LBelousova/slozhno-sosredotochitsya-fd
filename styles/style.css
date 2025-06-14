@@ -5,8 +5,10 @@
   font-weight: var(--font-weight_normal);
   font-size: var(--font-size);
   line-height: var(--line-height);
+  background: var(--cover-image) no-repeat center / cover;
   background-color: var(--bg-color, #000028);
   background-attachment: fixed;
+  inline-size: 100%;
 }
 
 .header {
@@ -16,7 +18,6 @@
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
   padding: 10px;
-  background: var(--cover-image) no-repeat center / cover;
   block-size: 100vh;
   min-block-size: 668px;
 }
@@ -92,14 +93,14 @@
   color: var(--accent-color, #ff0070);
   text-transform: lowercase;
   background: transparent;
+  cursor: pointer;
   appearance: none;
   min-inline-size: 70px;
   min-block-size: 26px;
-  cursor: pointer;
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid currentColor;
   pointer-events: none;
 }
 
@@ -130,11 +131,10 @@
 
 .header__text {
   grid-row: 3;
-  text-wrap: balance;
 }
 
 .accent-heading {
-  color: var(--title-decor, #000028);
+  color: var(--tistle-decor, #000028);
   font-weight: var(--font-weight_bold);
   font-size: inherit;
   background-color: var(--accent-bg-color, #ff0070);
@@ -262,9 +262,9 @@
   }
 
   .header__title {
-    margin-inline-start: -20px;
     grid-column: 1 / span 2;
     grid-row: 2;
+    margin-inline-start: -20px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
@@ -282,7 +282,7 @@
     grid-template-columns: minmax(236px, 1fr) repeat(2, 1fr);
   }
 
-  .section:nth-child(1) {
+  .section_no-row-gap {
     row-gap: 0;
   }
 
@@ -295,12 +295,12 @@
     grid-column: 2 / span 2;
   }
 
-  .section:nth-child(2) .section__title {
+  .section_extra-columns .section__title {
     grid-column: 1;
     grid-row: 1;
   }
 
-  .section:nth-child(2) .section__cards-list {
+  .section_extra-columns .section__cards-list {
     grid-column: 1 / span 3;
     grid-row: 2;
   }
@@ -372,12 +372,12 @@
     align-items: start;
   }
 
-  .section:nth-child(2) .section__title {
+  .section_extra-columns .section__title {
     grid-column: 1;
     grid-row: 1;
   }
 
-  .section:nth-child(2) .section__cards-list {
+  .section_extra-columns .section__cards-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column: 1 / span 3;
