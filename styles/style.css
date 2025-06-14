@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  font-family: var(--main-font), sans-serif;
+  font-family: var(--main-font), monospace;
   font-weight: var(--font-weight_normal);
   font-size: var(--font-size);
   line-height: var(--line-height);
@@ -134,7 +134,7 @@
 }
 
 .accent-heading {
-  color: var(--tistle-decor, #000028);
+  color: var(--title-decor, #000028);
   font-weight: var(--font-weight_bold);
   font-size: inherit;
   background-color: var(--accent-bg-color, #ff0070);
